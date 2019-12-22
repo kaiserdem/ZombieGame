@@ -20,7 +20,9 @@ class GameScene: SKScene {
   var lastTouchLocation: CGPoint?
   let zombieRotateRadiansPerSec:CGFloat = 4.0 * π
   let playableRect: CGRect // универсальный размер поля для всех екранов
-  let zombieAnimtion: SKAction// анимация бега
+  let zombieAnimtion: SKAction // анимация бега
+  let catCillisionSound: SKAction = SKAction.playSoundFileNamed("hitCat.wav", waitForCompletion: false)
+  let enemyCillisionSound: SKAction = SKAction.playSoundFileNamed("hitCatLady.wav", waitForCompletion: false)
   
   override init(size: CGSize) {
     let maxAspectRatio: CGFloat = 16.0 / 9.0
@@ -75,8 +77,9 @@ class GameScene: SKScene {
       
   }
   
-  override func didEvaluateActions() { // вызываеться после метода update
-    <#code#>
+  // вызываеться после метода update, когда все екшены сделаны
+  override func didEvaluateActions() {
+    checkCollisions()
   }
   
   func move(sprite: SKSpriteNode, velocity: CGPoint) {
@@ -185,12 +188,14 @@ class GameScene: SKScene {
     cat.run(SKAction.sequence(actions))
   }
   
-  func zombieHit(cat: SKSpriteNode) { // когда обьекты пересекаються удалить
+  func zombieHit(cat: SKSpriteNode) { // когда обьекты пересекаються
     cat.removeFromParent()
+    run(catCillisionSound)
   }
   
   func zombieHit(enemy: SKSpriteNode) {
     enemy.removeFromParent()
+    run(enemyCillisionSound)
   }
   
   func checkCollisions() { // пересекаються тогда удалить
@@ -243,7 +248,6 @@ class GameScene: SKScene {
     }
     
     boundsCheckZombie()
-    checkCollisions()
   }
   
   func sceneTouched(touchLocation: CGPoint) { // воспомагательная функция для передвижения
