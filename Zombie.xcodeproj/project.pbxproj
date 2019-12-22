@@ -21,7 +21,6 @@
 		ADB1DAE023AF5FC10071F329 /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = ADB1DADC23AF5F7E0071F329 /* win.wav */; };
 		ADB1DAE123AF5FC40071F329 /* hitCatLady.wav in Resources */ = {isa = PBXBuildFile; fileRef = ADB1DADB23AF5F7B0071F329 /* hitCatLady.wav */; };
 		ADB1DAE323AF647A0071F329 /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB1DAE223AF647A0071F329 /* MainMenuScene.swift */; };
-		ADB1DAE523AF68C30071F329 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB1DAE423AF68C30071F329 /* test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +40,6 @@
 		ADB1DADB23AF5F7B0071F329 /* hitCatLady.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hitCatLady.wav; sourceTree = "<group>"; };
 		ADB1DADC23AF5F7E0071F329 /* win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = win.wav; sourceTree = "<group>"; };
 		ADB1DAE223AF647A0071F329 /* MainMenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
-		ADB1DAE423AF68C30071F329 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +79,6 @@
 				ADB1DACF23AE5DFE0071F329 /* MyUtils.swift */,
 				ADB1DAE223AF647A0071F329 /* MainMenuScene.swift */,
 				ADB1DABF23AE57200071F329 /* GameViewController.swift */,
-				ADB1DAE423AF68C30071F329 /* test.swift */,
 				ADB1DAC123AE57200071F329 /* Main.storyboard */,
 				ADB1DAC423AE57210071F329 /* Assets.xcassets */,
 				ADB1DAC623AE57210071F329 /* LaunchScreen.storyboard */,
@@ -179,7 +176,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADB1DAE323AF647A0071F329 /* MainMenuScene.swift in Sources */,
-				ADB1DAE523AF68C30071F329 /* test.swift in Sources */,
 				AD88953B23AF729500347A6A /* GameOverScene.swift in Sources */,
 				ADB1DABE23AE57200071F329 /* GameScene.swift in Sources */,
 				ADB1DAC023AE57200071F329 /* GameViewController.swift in Sources */,
