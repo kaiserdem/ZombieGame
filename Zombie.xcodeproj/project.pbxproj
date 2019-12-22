@@ -14,12 +14,13 @@
 		ADB1DAC523AE57210071F329 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADB1DAC423AE57210071F329 /* Assets.xcassets */; };
 		ADB1DAC823AE57210071F329 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADB1DAC623AE57210071F329 /* LaunchScreen.storyboard */; };
 		ADB1DAD023AE5DFE0071F329 /* MyUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB1DACF23AE5DFE0071F329 /* MyUtils.swift */; };
-		ADB1DAD423AE76630071F329 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB1DAD323AE76630071F329 /* test.swift */; };
 		ADB1DADD23AF5FB80071F329 /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ADB1DAD823AF5F740071F329 /* backgroundMusic.mp3 */; };
 		ADB1DADE23AF5FBB0071F329 /* lose.wav in Resources */ = {isa = PBXBuildFile; fileRef = ADB1DADA23AF5F790071F329 /* lose.wav */; };
 		ADB1DADF23AF5FBE0071F329 /* hitCat.wav in Resources */ = {isa = PBXBuildFile; fileRef = ADB1DAD923AF5F760071F329 /* hitCat.wav */; };
 		ADB1DAE023AF5FC10071F329 /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = ADB1DADC23AF5F7E0071F329 /* win.wav */; };
 		ADB1DAE123AF5FC40071F329 /* hitCatLady.wav in Resources */ = {isa = PBXBuildFile; fileRef = ADB1DADB23AF5F7B0071F329 /* hitCatLady.wav */; };
+		ADB1DAE323AF647A0071F329 /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB1DAE223AF647A0071F329 /* MainMenuScene.swift */; };
+		ADB1DAE523AF68C30071F329 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB1DAE423AF68C30071F329 /* test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,12 +33,13 @@
 		ADB1DAC723AE57210071F329 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADB1DAC923AE57210071F329 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADB1DACF23AE5DFE0071F329 /* MyUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUtils.swift; sourceTree = "<group>"; };
-		ADB1DAD323AE76630071F329 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		ADB1DAD823AF5F740071F329 /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundMusic.mp3; sourceTree = "<group>"; };
 		ADB1DAD923AF5F760071F329 /* hitCat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hitCat.wav; sourceTree = "<group>"; };
 		ADB1DADA23AF5F790071F329 /* lose.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lose.wav; sourceTree = "<group>"; };
 		ADB1DADB23AF5F7B0071F329 /* hitCatLady.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hitCatLady.wav; sourceTree = "<group>"; };
 		ADB1DADC23AF5F7E0071F329 /* win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = win.wav; sourceTree = "<group>"; };
+		ADB1DAE223AF647A0071F329 /* MainMenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
+		ADB1DAE423AF68C30071F329 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +76,8 @@
 				ADB1DAB723AE57200071F329 /* AppDelegate.swift */,
 				ADB1DABD23AE57200071F329 /* GameScene.swift */,
 				ADB1DACF23AE5DFE0071F329 /* MyUtils.swift */,
-				ADB1DAD323AE76630071F329 /* test.swift */,
+				ADB1DAE223AF647A0071F329 /* MainMenuScene.swift */,
+				ADB1DAE423AF68C30071F329 /* test.swift */,
 				ADB1DABF23AE57200071F329 /* GameViewController.swift */,
 				ADB1DAC123AE57200071F329 /* Main.storyboard */,
 				ADB1DAC423AE57210071F329 /* Assets.xcassets */,
@@ -172,10 +175,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADB1DAE323AF647A0071F329 /* MainMenuScene.swift in Sources */,
+				ADB1DAE523AF68C30071F329 /* test.swift in Sources */,
 				ADB1DABE23AE57200071F329 /* GameScene.swift in Sources */,
 				ADB1DAC023AE57200071F329 /* GameViewController.swift in Sources */,
 				ADB1DAB823AE57200071F329 /* AppDelegate.swift in Sources */,
-				ADB1DAD423AE76630071F329 /* test.swift in Sources */,
 				ADB1DAD023AE5DFE0071F329 /* MyUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
