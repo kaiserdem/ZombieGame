@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD88953B23AF729500347A6A /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD88953A23AF729500347A6A /* GameOverScene.swift */; };
 		ADB1DAB823AE57200071F329 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB1DAB723AE57200071F329 /* AppDelegate.swift */; };
 		ADB1DABE23AE57200071F329 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB1DABD23AE57200071F329 /* GameScene.swift */; };
 		ADB1DAC023AE57200071F329 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB1DABF23AE57200071F329 /* GameViewController.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD88953A23AF729500347A6A /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		ADB1DAB423AE57200071F329 /* Zombie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zombie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB1DAB723AE57200071F329 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADB1DABD23AE57200071F329 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -75,10 +77,11 @@
 				ADB1DAD523AF5CC80071F329 /* Sounds */,
 				ADB1DAB723AE57200071F329 /* AppDelegate.swift */,
 				ADB1DABD23AE57200071F329 /* GameScene.swift */,
+				AD88953A23AF729500347A6A /* GameOverScene.swift */,
 				ADB1DACF23AE5DFE0071F329 /* MyUtils.swift */,
 				ADB1DAE223AF647A0071F329 /* MainMenuScene.swift */,
-				ADB1DAE423AF68C30071F329 /* test.swift */,
 				ADB1DABF23AE57200071F329 /* GameViewController.swift */,
+				ADB1DAE423AF68C30071F329 /* test.swift */,
 				ADB1DAC123AE57200071F329 /* Main.storyboard */,
 				ADB1DAC423AE57210071F329 /* Assets.xcassets */,
 				ADB1DAC623AE57210071F329 /* LaunchScreen.storyboard */,
@@ -177,6 +180,7 @@
 			files = (
 				ADB1DAE323AF647A0071F329 /* MainMenuScene.swift in Sources */,
 				ADB1DAE523AF68C30071F329 /* test.swift in Sources */,
+				AD88953B23AF729500347A6A /* GameOverScene.swift in Sources */,
 				ADB1DABE23AE57200071F329 /* GameScene.swift in Sources */,
 				ADB1DAC023AE57200071F329 /* GameViewController.swift in Sources */,
 				ADB1DAB823AE57200071F329 /* AppDelegate.swift in Sources */,

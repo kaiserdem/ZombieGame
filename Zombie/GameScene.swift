@@ -52,7 +52,8 @@ class GameScene: SKScene {
   
   
     override func didMove(to view: SKView) {
-        
+      
+      playBackgroundMusic(fileName: "backgroundMusic.mp3")
       backgroundColor = .black
       
       let background = SKSpriteNode(imageNamed: "background1")
@@ -77,7 +78,7 @@ class GameScene: SKScene {
           },
                            SKAction.wait(forDuration: 1.0)])))
       
-      debugDrawPlayableArea()
+      //debugDrawPlayableArea()
       
   }
   
@@ -301,11 +302,25 @@ class GameScene: SKScene {
     boundsCheckZombie()
     
     moveTrain()
+    
+    if lives <= 0 && !gameOver { // жизней нет и игра не закончена
+      gameOver = true
+      print("You Lose!")
+      backgroundMusicPlayer.stop()
+      
+      let gameOverScene = GameOverScene(size: size, won: false) // переход на другую сцену
+      gameOverScene.scaleMode = scaleMode
+      let reveal = SKTransition.flipHorizontal(withDuration: 0.5) // анимация появления
+      view?.presentScene(gameOverScene, transition: reveal)
+    }
   }
-  func moveTrain() {
+  
+  func moveTrain() { // коты следуют за зомби
+    var trainCount = 0
     var targetPosition = zombie.position
     
     enumerateChildNodes(withName: "train") { node, stop in
+      trainCount += 1
       if !node.hasActions() {
         let actionDuration = 0.3
         let offset = targetPosition - node.position
@@ -316,6 +331,16 @@ class GameScene: SKScene {
         node.run(moveAction)
       }
       targetPosition = node.position
+    }
+    if trainCount >= 15 && !gameOver {
+      gameOver = true
+      print("You Win")
+      backgroundMusicPlayer.stop()
+      
+      let gameOverScene = GameOverScene(size: size, won: true) // переход на другую сцену
+      gameOverScene.scaleMode = scaleMode
+      let reveal = SKTransition.flipHorizontal(withDuration: 0.5) // анимация появления
+      view?.presentScene(gameOverScene, transition: reveal)
     }
   }
   
