@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		AD88953B23AF729500347A6A /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD88953A23AF729500347A6A /* GameOverScene.swift */; };
+		AD88954223AFD43F00347A6A /* Quillain (DEMO).ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD88953F23AFD43F00347A6A /* Quillain (DEMO).ttf */; };
+		AD88954523AFD44C00347A6A /* Mella Nissa.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD88954323AFD44C00347A6A /* Mella Nissa.ttf */; };
+		AD88954623AFD44C00347A6A /* Playkidz.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD88954423AFD44C00347A6A /* Playkidz.ttf */; };
+		AD88954823AFD4FD00347A6A /* Glimstick.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD88954723AFD4FD00347A6A /* Glimstick.ttf */; };
 		ADB1DAB823AE57200071F329 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB1DAB723AE57200071F329 /* AppDelegate.swift */; };
 		ADB1DABE23AE57200071F329 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB1DABD23AE57200071F329 /* GameScene.swift */; };
 		ADB1DAC023AE57200071F329 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB1DABF23AE57200071F329 /* GameViewController.swift */; };
@@ -25,6 +29,10 @@
 
 /* Begin PBXFileReference section */
 		AD88953A23AF729500347A6A /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+		AD88953F23AFD43F00347A6A /* Quillain (DEMO).ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quillain (DEMO).ttf"; sourceTree = "<group>"; };
+		AD88954323AFD44C00347A6A /* Mella Nissa.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mella Nissa.ttf"; sourceTree = "<group>"; };
+		AD88954423AFD44C00347A6A /* Playkidz.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Playkidz.ttf; sourceTree = "<group>"; };
+		AD88954723AFD4FD00347A6A /* Glimstick.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Glimstick.ttf; sourceTree = "<group>"; };
 		ADB1DAB423AE57200071F329 /* Zombie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zombie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB1DAB723AE57200071F329 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADB1DABD23AE57200071F329 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -53,6 +61,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD88953C23AFD41700347A6A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AD88954323AFD44C00347A6A /* Mella Nissa.ttf */,
+				AD88954723AFD4FD00347A6A /* Glimstick.ttf */,
+				AD88954423AFD44C00347A6A /* Playkidz.ttf */,
+				AD88953F23AFD43F00347A6A /* Quillain (DEMO).ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		ADB1DAAB23AE57200071F329 = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				ADB1DAD523AF5CC80071F329 /* Sounds */,
+				AD88953C23AFD41700347A6A /* Fonts */,
 				ADB1DAB723AE57200071F329 /* AppDelegate.swift */,
 				ADB1DABD23AE57200071F329 /* GameScene.swift */,
 				AD88953A23AF729500347A6A /* GameOverScene.swift */,
@@ -157,13 +177,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD88954823AFD4FD00347A6A /* Glimstick.ttf in Resources */,
 				ADB1DAE023AF5FC10071F329 /* win.wav in Resources */,
 				ADB1DAE123AF5FC40071F329 /* hitCatLady.wav in Resources */,
+				AD88954623AFD44C00347A6A /* Playkidz.ttf in Resources */,
 				ADB1DADE23AF5FBB0071F329 /* lose.wav in Resources */,
 				ADB1DAC323AE57200071F329 /* Main.storyboard in Resources */,
 				ADB1DAC523AE57210071F329 /* Assets.xcassets in Resources */,
 				ADB1DADF23AF5FBE0071F329 /* hitCat.wav in Resources */,
 				ADB1DADD23AF5FB80071F329 /* backgroundMusic.mp3 in Resources */,
+				AD88954523AFD44C00347A6A /* Mella Nissa.ttf in Resources */,
+				AD88954223AFD43F00347A6A /* Quillain (DEMO).ttf in Resources */,
 				ADB1DAC823AE57210071F329 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

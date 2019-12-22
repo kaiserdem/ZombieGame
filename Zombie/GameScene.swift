@@ -23,12 +23,14 @@ class GameScene: SKScene {
   let zombieAnimtion: SKAction // анимация бега
   let catCillisionSound: SKAction = SKAction.playSoundFileNamed("hitCat.wav", waitForCompletion: false)
   let enemyCillisionSound: SKAction = SKAction.playSoundFileNamed("hitCatLady.wav", waitForCompletion: false)
-  var lives = 5
+  var lives = 10
   var gameOver = false
   var invincible = false
   let catMovePointsPerSec:CGFloat = 480.0
   let cameraNode = SKCameraNode()
   let cameraMovePointsPerSec: CGFloat = 200.0 // скорость камеры
+  let livesLabel = SKLabelNode(fontNamed: "Glimstick")
+  let countCats = SKLabelNode(fontNamed: "Glimstick")
   
   var cameraRect: CGRect { // видимый прямоугольник
     let x = cameraNode.position.x - size.width / 2
@@ -102,6 +104,24 @@ class GameScene: SKScene {
     camera = cameraNode
     // зомби по середине камеры
     cameraNode.position = CGPoint(x: size.width / 2, y: size.height / 2)
+    
+    livesLabel.text = "Lives: X"
+    livesLabel.fontColor = SKColor.black
+    livesLabel.fontSize = 100
+    livesLabel.zPosition = 150
+    livesLabel.horizontalAlignmentMode = .left
+    livesLabel.verticalAlignmentMode = .bottom
+    livesLabel.position = CGPoint(x: -playableRect.size.width / 2 + CGFloat(20), y:  -playableRect.size.height / 2 + CGFloat(20))
+    cameraNode.addChild(livesLabel)
+    
+    countCats.text = "Cats: 0"
+    countCats.fontColor = SKColor.black
+    countCats.fontSize = 100
+    countCats.zPosition = 150
+    countCats.horizontalAlignmentMode = .right
+    countCats.verticalAlignmentMode = .bottom
+    countCats.position = CGPoint(x: playableRect.size.width / 2 - CGFloat(10), y:  -playableRect.size.height / 2 + CGFloat(20))
+    cameraNode.addChild(countCats)
     
   }
   
@@ -189,6 +209,8 @@ class GameScene: SKScene {
     boundsCheckZombie()
     moveTrain()
     moveCamera()
+    
+    livesLabel.text = "Lives: \(lives)"
     
     if lives <= 0 && !gameOver { // жизней нет и игра не закончена
       gameOver = true
@@ -394,6 +416,7 @@ class GameScene: SKScene {
       }
       targetPosition = node.position
     }
+    self.countCats.text = "Cats: \(trainCount)"
     if trainCount >= 15 && !gameOver {
       gameOver = true
       print("You Win")
