@@ -35,7 +35,10 @@ class GameScene: SKScene {
       + (size.width - playableRect.size.width) / 2
     let y = cameraNode.position.y - size.width / 2
       + (size.height - playableRect.size.height) / 2
-    return CGRect(x: x, y: y, width: playableRect.width, height: playableRect.height)
+    return CGRect(x: x,
+                  y: y,
+                  width: playableRect.width,
+                  height: playableRect.height)
     
   }
   
@@ -43,7 +46,10 @@ class GameScene: SKScene {
     let maxAspectRatio: CGFloat = 16.0 / 9.0
     let playableHight = size.width / maxAspectRatio
     let playableMargin = (size.height - playableHight) / 2.0
-    playableRect = CGRect(x: 0, y: playableMargin, width: size.width, height: playableHight)
+    playableRect = CGRect(x: 0,
+                          y: playableMargin,
+                          width: size.width,
+                          height: playableHight)
     
     // анимация
     var textures: [SKTexture] = []
@@ -65,7 +71,6 @@ class GameScene: SKScene {
   override func didMove(to view: SKView) {
     
     playBackgroundMusic(fileName: "backgroundMusic.mp3")
-    backgroundColor = .black
     
     for i in 0...1 {
 
@@ -100,7 +105,7 @@ class GameScene: SKScene {
     
   }
   
-  func moveCamera() {// двигает камеру
+  func moveCamera() { // двигает камеру
     
     let backgroundVelocity = CGPoint(x: cameraMovePointsPerSec, y: 0)
     let amountToMove = backgroundVelocity * CGFloat(dt)
@@ -109,7 +114,8 @@ class GameScene: SKScene {
     enumerateChildNodes(withName: "background") { (node, _) in
       let background = node as! SKSpriteNode
       if background.position.x + background.size.width < self.cameraRect.origin.x {
-        background.position = CGPoint(x: background.position.x + background.size.width * 2, y: background.position.y)
+        background.position = CGPoint(x: background.position.x + background.size.width * 2,
+                                      y: background.position.y)
       }
     }
   }
@@ -147,12 +153,14 @@ class GameScene: SKScene {
       randomSpot.x += CGFloat.random(min: -100, max: 100)
       randomSpot.y += CGFloat.random(min: -100, max: 100)
       node.name = ""
-      node.run(SKAction.sequence([SKAction.group([
+      node.run(
+        SKAction.sequence([
+        SKAction.group([
         SKAction.rotate(byAngle: π*4, duration: 1.0), // крутиться на угол п 4
         SKAction.move(to: randomSpot, duration: 1.0), // двигаться в рандомном направление
         SKAction.scale(to: 0, duration: 1) // пропадет
         ]),
-                                  SKAction.removeFromParent() // удалиться
+        SKAction.removeFromParent() // удалиться
         ]))
       loseCount += 1
       if loseCount >= 2 {
@@ -164,7 +172,6 @@ class GameScene: SKScene {
   func move(sprite: SKSpriteNode, velocity: CGPoint) {
     let amountToMove = CGPoint(x: velocity.x * CGFloat(dt),
                                y: velocity.y * CGFloat(dt))
-    //print("Amount to move: \(amountToMove)")
     sprite.position += amountToMove
   }
   
@@ -211,7 +218,6 @@ class GameScene: SKScene {
   func moveZombieToward(location:CGPoint) { // напрявляться в эту точку
     startZombieAnimation()
     let offset = location - zombie.position
-    
     let direction = offset.normalized()
     velocity = direction * zombieMovePointsPerSec
   }
@@ -259,8 +265,12 @@ class GameScene: SKScene {
     
     let enemy = SKSpriteNode(imageNamed: "enemy")
     enemy.name = "enemy"
-    enemy.position = CGPoint(x: size.width + enemy.size.width / 2,
-                             y:CGFloat.random(min: playableRect.minY + enemy.size.height / 2, max: playableRect.maxY - enemy.size.height / 2))
+    enemy.position = CGPoint(x: cameraRect.maxX + enemy.size.width/2,
+                             y: CGFloat.random(
+                              min: cameraRect.minY + enemy.size.height/2,
+                              max: cameraRect.maxY - enemy.size.height/2))
+    enemy.zPosition = 50
+    enemy.name = "enemy"
     addChild(enemy)
     
     let actionMove = SKAction.moveTo(x: -enemy.size.width / 2, duration: 2.0)
@@ -276,6 +286,7 @@ class GameScene: SKScene {
                                              max: cameraRect.maxX),
                            y: CGFloat.random(min: cameraRect.minY,
                                              max: cameraRect.maxY))
+    cat.zPosition = 50
     cat.setScale(0)
     addChild(cat)
     
@@ -354,7 +365,7 @@ class GameScene: SKScene {
     enumerateChildNodes(withName: "enemy") { (node, _) in
       let enemy = node as! SKSpriteNode
       // insetBy сделали больше размер обьектыа
-      if enemy.frame.insetBy(dx: 20, dy: 20).intersects(self.zombie.frame) { // если фреймы пересекаються
+      if node.frame.insetBy(dx: 20, dy: 20).intersects(self.zombie.frame) { // если фреймы пересекаються
         hitEnemies.append(enemy)
       }
     }
